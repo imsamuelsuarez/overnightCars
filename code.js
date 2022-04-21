@@ -1,6 +1,10 @@
 const beginDate = document.getElementById('beginDate');
-
 const endDate = document.getElementById('endDate');
+
+const inputResult = {
+    inputDollarResult: document.getElementById(`dollarFinalPayment`),
+    inputBolivarResult: document.getElementById(`bolivarFinalPayment`)
+}
 
 const btn = document.getElementById('btn');
 btn.addEventListener('click', calcOvernight);
@@ -13,27 +17,45 @@ function calcOvernight()
     const diffHours = (finalEndDate - finalBeginDate) / 1000 / 60 / 60;
 
     const paymentHours = Math.floor(diffHours / 12);
-    const rawPaymentHours = diffHours / 12;
+
   
-    for(let i = 0; i < paymentHours; i++)
-    {
+    const arr = [];
+
+    for(let i = 0; i <= paymentHours; i++)
+    { 
+              
         const dayTime = 2;
         const nightTime = 3;
-        let initialPayment = 2;
-        let finalPayment;
-        let tempSum = 2;
         if(Number.isInteger(i / 2))
         {
-            tempSum += nightTime
-            console.log(tempSum);
+            
+            console.log(`Se anadieron ${nightTime}$ a la cuenta`);
+            arr.push(nightTime);
             
         }
-        else
+        
+        else if(!Number.isInteger(i / 2))
         {
-            tempSum += dayTime
-            console.log(tempSum);
-            
-     }
+            console.log(`Se anadieron ${dayTime}$ a la cuenta`);
+            arr.push(dayTime);
+                
+        }
+        if(i == paymentHours)
+        {
+           const finalPayment = arr.reduce((acc, cur) => acc + cur, 0);
+
+           const bolivarFinalPayment = (finalPayment * 17.28).toFixed(2);
+
+
+           
+
+
+           inputResult.inputDollarResult.innerText = finalPayment;
+
+           inputResult.inputBolivarResult.innerText = bolivarFinalPayment;
+
+
+        }
 
 }
 }
