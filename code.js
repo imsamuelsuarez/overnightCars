@@ -1,6 +1,8 @@
 const beginDate = document.getElementById('beginDate');
 const endDate = document.getElementById('endDate');
 
+const dollarValue = parseFloat(document.getElementById('dollar').value);
+
 const inputResult = {
     inputDollarResult: document.getElementById(`dollarFinalPayment`),
     inputBolivarResult: document.getElementById(`bolivarFinalPayment`)
@@ -26,21 +28,19 @@ function calcOvernight()
         if(Number.isInteger(i / 2))
         {
             
-            console.log(`Se anadieron ${nightTime}$ a la cuenta`);
             arr.push(nightTime);
             
         }
         
         else if(!Number.isInteger(i / 2))
         {
-            console.log(`Se anadieron ${dayTime}$ a la cuenta`);
             arr.push(dayTime);
                 
         }
         if(i == paymentHours)
         {
            const finalPayment = arr.reduce((acc, cur) => acc + cur, 0).toFixed(2);
-           const bolivarFinalPayment = (finalPayment * 17.28).toFixed(2);
+           const bolivarFinalPayment = (finalPayment * dollarValue).toFixed(2);
 
            inputResult.inputDollarResult.innerText = finalPayment;
            inputResult.inputBolivarResult.innerText = bolivarFinalPayment;
