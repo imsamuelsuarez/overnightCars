@@ -86,7 +86,6 @@ h2
     flex-direction: column;
     justify-content: center;
     gap: 8px;
-   
     font-size: 1.8rem;
     font-weight: bold;
     
@@ -114,20 +113,22 @@ h2
     align-items: center;
     border-radius: 10px;
 }
-.result-input div 
+.result-input .info-container
 {
     width: 90%;
     height: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 40px;
     align-items: center;
-    justify-items: center;
-    
     font-size: 5rem;
+    font-family: sans-serif;
     font-weight: bold;
+}
 
+.result-input .info-container p
+{
+    text-align: end;
 }
 
 

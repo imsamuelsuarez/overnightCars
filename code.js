@@ -11,14 +11,11 @@ btn.addEventListener('click', calcOvernight);
 
 function calcOvernight()
 {
-    const finalBeginDate = new Date(beginDate.value + "T06:00:00");
+    const finalBeginDate = new Date(beginDate.value + "T06:00:00"); 
     const finalEndDate = new Date(endDate.value)
+    const diffHours = (finalEndDate - finalBeginDate) / 1000 / 60 / 60; // Convertimos la diferencia de tiempo a horas. 
+    const paymentHours = Math.floor(diffHours / 12); // Obtenemos las horas que pueden cobrarse, segundo las normas del estacionamiento. 
 
-    const diffHours = (finalEndDate - finalBeginDate) / 1000 / 60 / 60;
-
-    const paymentHours = Math.floor(diffHours / 12);
-
-  
     const arr = [];
 
     for(let i = 0; i <= paymentHours; i++)
@@ -42,21 +39,13 @@ function calcOvernight()
         }
         if(i == paymentHours)
         {
-           const finalPayment = arr.reduce((acc, cur) => acc + cur, 0);
-
+           const finalPayment = arr.reduce((acc, cur) => acc + cur, 0).toFixed(2);
            const bolivarFinalPayment = (finalPayment * 17.28).toFixed(2);
 
-
-           
-
-
            inputResult.inputDollarResult.innerText = finalPayment;
-
            inputResult.inputBolivarResult.innerText = bolivarFinalPayment;
 
-
         }
-
-}
+    }
 }
 
