@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="container--title">Calculo de Pernoctas</h1>
+        <div class="container--info">
+            <form action="" class="overTimeForm">
+                <h2>Completar Campos</h2>
+                <label for="beginDate">
+                    <span>Fecha de inicio:</span>
+                    <input type="date" id="beginDate">
+                </label>
+                <label for="endDate">
+                    <span>Fecha fin:</span>
+                    <input type="datetime-local" id="endDate">
+                </label>
+                
+            </form>
+                <div class="result-input">
+                    <h2>MONTO A COBRAR</h2>
+                   <div class="info-container">
+                    <p><span>$.</span>0</p>
+                    <p><span>Bs.</span>0</p>
+                   </div>     
+                </div>
+            <input type="button" value="Calcular" class="form__main--button" id="btn">
+        </div>
+    </main>
+    <script src="./code.js"></script>
+</body>
+
+</html>
