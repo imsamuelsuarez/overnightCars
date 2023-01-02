@@ -21,13 +21,16 @@
                     <span>Fecha fin:</span>
                     <input type="datetime-local" id="endDate">
                 </label>
-                
+                <label for="dollar">
+                    <span>Tasa del dolar</span>
+                    <input type="number" id="dollar">
+                </label>
             </form>
                 <div class="result-input">
                     <h2>MONTO A COBRAR</h2>
                    <div class="info-container">
-                    <p><span>$.</span>0</p>
-                    <p><span>Bs.</span>0</p>
+                    <span>$.</span> <p id="dollarFinalPayment">0</p>
+                    <span>Bs.</span> <p id="bolivarFinalPayment">0</p>
                    </div>     
                 </div>
             <input type="button" value="Calcular" class="form__main--button" id="btn">
