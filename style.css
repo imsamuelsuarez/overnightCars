@@ -94,6 +94,10 @@ h2
     
 }
 
+.dollarLabel
+{
+    margin-bottom: 20px;
+}
 .overTimeForm input
 {
     padding: 16px;
