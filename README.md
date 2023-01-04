@@ -1,10 +1,11 @@
-# Calculadora de Pernoctas. Aeropuerto Internacional Arturo Michelena, Edo. Carabobo, Valencia. Venezuela
+# Calculadora de Pernoctas. 
+> Aeropuerto Internacional Arturo Michelena, Edo. Carabobo, Valencia. Venezuela
 
-> Actualmente me encuentro laborando en el estacionamiento del aeropuerto de mi ciudad. Aqui ofrecemos el servicio de cuidar tu auto en el estacionamiento los dias que vayas de viaje.
+En el aeropuerto internacional de mi ciudad ofrecen un servicio de pernocta para los vehiculos.
 
-> Las tarifas para este servicio son, 2$ el horario diurno (6AM, 6PM) y 3$ el horario nocturno (6PM, 6AM).
+Las tarifas para este servicio son, 2$ el horario diurno (6AM, 6PM) y 3$ el horario nocturno (6PM, 6AM).
 
-> Mi trabajo es realizar una calculadora para usar en el telefono que permita calcular cuanto debe pagar un usuario que pernocto. 
+Mi trabajo es realizar una calculadora para usar en el telefono que permita calcular cuanto debe pagar un usuario que pernocto. 
 
 > Para realizar este calculo debe tomarse en cuenta: 
 
@@ -30,5 +31,5 @@
 
 > (fechaLlegada - fecha salida) / 1000 / 60 / 60;
 
-## Al dividir nuestro resultado en 1000, obtenemos la conversion en segundos. Al dividir nuevamente entre 60, obtenemos el resultado en minutos. Al dividir nuevamente a 60, obtenemos el resultado en horas. 
+ Al dividir nuestro resultado en 1000, obtenemos la conversion en segundos. Al dividir nuevamente entre 60, obtenemos el resultado en minutos. Al dividir nuevamente a 60, obtenemos el resultado en horas. 
 
