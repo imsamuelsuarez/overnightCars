@@ -1,7 +1,7 @@
 const beginDate = document.getElementById('beginDate');
 const endDate = document.getElementById('endDate');
 
-const dollar = parseFloat(document.getElementById('dollar').value);
+const dollar = document.getElementById('dollar');
 
 const inputResult = {
     inputDollarResult: document.getElementById(`dollarFinalPayment`),
@@ -15,7 +15,7 @@ function calcOvernight()
 {
     const finalBeginDate = new Date(beginDate.value + "T06:00:00"); 
     const finalEndDate = new Date(endDate.value);
-    const dollarValue = dollar;
+    const dollarValue = parseFloat(dollar.value);
     const diffHours = (finalEndDate - finalBeginDate) / 1000 / 60 / 60; // Convertimos la diferencia de tiempo a horas. 
     const paymentHours = Math.floor(diffHours / 12); // Obtenemos las horas que pueden cobrarse, segundo las normas del estacionamiento. 
 
