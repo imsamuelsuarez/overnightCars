@@ -68,10 +68,11 @@ h2
 .overTimeForm
 {
     width: 100%;
-    height: 40%;
+    height: 50%;
     color: orange;
     background-color: black;
     display: flex;
+    gap: 10px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -86,6 +87,7 @@ h2
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+   
     font-size: 1.8rem;
     font-weight: bold;
     
@@ -101,7 +103,6 @@ h2
     border: none;
     
 }
-
 .result-input
 {
     color: orange;
@@ -114,22 +115,20 @@ h2
     align-items: center;
     border-radius: 10px;
 }
-.result-input .info-container
+.result-input div 
 {
     width: 90%;
     height: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 40px;
     align-items: center;
+    justify-items: center;
+    
     font-size: 5rem;
-    font-family: sans-serif;
     font-weight: bold;
-}
 
-.result-input .info-container p
-{
-    text-align: end;
 }
 
 
